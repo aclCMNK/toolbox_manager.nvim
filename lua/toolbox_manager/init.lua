@@ -74,7 +74,7 @@ local function bind_list()
 		end
 	end
 	if _fzf ~= nil then
-		_fzf_props["prompt"] = "ToolBox > Tools > " .. title
+		_fzf_props["prompt"] = "󰦬  ToolBox > Tools > " .. title
 		_fzf_props["cwd"] = vim.loop.cwd()
 		_fzf_props["actions"] = {
 			["default"] = function(selected)
@@ -94,7 +94,7 @@ local function bind_list()
 		_fzf.fzf_exec(labels, _fzf_props)
 		return
 	end
-	vim.ui.select(labels, { prompt = "ToolBox > Tools" .. title }, function(choice)
+	vim.ui.select(labels, { prompt = "󰦬   ToolBox > Tools" .. title }, function(choice)
 		if choice then
 			run_cmd(choice, commands)
 		end
