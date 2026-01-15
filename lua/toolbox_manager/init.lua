@@ -30,6 +30,9 @@ local function find_node_by_id(tools)
 		end
 		if type(v.tools) == "table" then
 			node = find_node_by_id(v.tools)
+            if node ~= nil then
+                return node
+            end
 		end
 	end
 	return node
